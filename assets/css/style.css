@@ -1,0 +1,800 @@
+/* ============HEADER STYLES START======= */
+
+.btn {
+  margin-bottom: 0.5em;
+  width: 100%;
+  background-color: var(--main-color);
+  padding: 0.3em 0.5em;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  box-shadow: 1px 5px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: var(--sec-color);
+  transform: scale(1.1);
+}
+header {
+  position: fixed;
+  padding: 1em;
+  background-color: rgb(2, 2, 49);
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  z-index: 10000;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--sec-color);
+}
+
+/* header .navBar {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.icons {
+  color: var(--sec-color);
+  cursor: pointer;
+}
+
+.icons:hover,
+header nav a:hover {
+  color: #fff;
+}
+header section {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .searchBarContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgb(2, 2, 49);
+  border-top: 0.2em solid rgb(65, 64, 64);
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  z-index: 1001;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: all 0.5s ease;
+}
+
+header .searchBarContainer.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transition: all 0.5s ease;
+}
+
+header .searchBarContainer #searchB {
+  width: 100%;
+  text-transform: none;
+  font-size: 1rem;
+}
+
+header div .bi-list {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+header div i:hover .bi-list {
+  transform: rotate(90deg);
+}
+
+/* ============HEADER STYLES ENDS======= */
+
+/* ============LOGINS STYLES START ======= */
+.loginFormContainer {
+  position: fixed;
+  top: -120%;
+  z-index: 1000;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.loginFormContainer.active {
+  top: 0;
+  transition: all 0.5s ease;
+}
+
+.loginFormContainer form {
+  margin-top: 4em;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: #fff;
+  width: 30em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginFormContainer form h3 {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.loginFormContainer form input {
+  margin-top: 0.5em;
+}
+
+.loginFormContainer form .btn {
+  margin-bottom: 0.5em;
+  width: 100%;
+  background-color: var(--main-color);
+  padding: 0.5em;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  box-shadow: 1px 5px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.loginFormContainer form .btn:hover {
+  background-color: var(--sec-color);
+  transform: scale(1.1);
+}
+
+.loginFormContainer form p {
+  text-decoration: none;
+  color: #000;
+}
+
+.loginFormContainer form p a {
+  text-decoration: none;
+  color: var(--sec-color);
+}
+
+.loginFormContainer form p a:hover {
+  color: var(--main-color);
+}
+
+.loginFormContainer i {
+  position: absolute;
+  bottom: 75%;
+  left: 90%;
+  font-size: 3rem;
+  color: #fff;
+}
+
+/* ============LOGINS STYLES ENDS======= */
+
+/* ============HERO SECTIONS START======= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1em;
+  z-index: 0;
+}
+
+.hero h2,
+p {
+  color: #fff;
+  text-align: center;
+}
+
+.hero .heroContents h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.hero .videoContainer video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-color: var(--main-color);
+}
+
+.hero .videoContainer .layIt {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero .controls {
+  padding: 1em;
+  border-radius: 10%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  top: 10em;
+}
+
+.hero .controls .vidBtn {
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.hero .controls .vidBtn.active {
+  background-color: var(--sec-color);
+}
+
+/* ============HERO SECTIONS ENDS======= */
+
+/* ============BOOK SECTIONS STARTS======= */
+.heading {
+  padding: 1em 0;
+  margin: 2em 0;
+  border-bottom: 2px solid var(--sec-color);
+  text-align: center;
+}
+
+.heading span {
+  text-align: center;
+  padding: 0.3em 0.5em;
+  border-radius: 0.2em;
+  background-color: rgba(247, 231, 14, 0.5);
+  color: var(--sec-color);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.heading .dash {
+  background-color: transparent;
+}
+
+.BookImgSide {
+  position: relative;
+  overflow: hidden;
+  padding: 1em;
+  border-left: solid 2px var(--sec-color);
+}
+
+.BookFormSide {
+  padding: 1em;
+  border-radius: 5px;
+  background-color: var(--sec-color);
+  box-shadow: 1px 5px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.BookFormSide label {
+  margin: 0.5em 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.BookFormSide input {
+  font-size: 0.7rem;
+  padding: 1.5em;
+}
+
+.BookFormSide .btn {
+  margin-top: 1.5em;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.BookFormSide .btn:hover {
+  background-color: #fff;
+  color: var(--main-color);
+  border: solid 3px var(--main-color);
+}
+
+.TravelImg {
+  width: 100%;
+  -webkit-animation: imageMovers 2s infinite alternate;
+  animation: imageMovers 2s infinite alternate;
+}
+
+.TravelImg4 {
+  position: absolute;
+  bottom: 82%;
+  right: 70%;
+  width: 15%;
+  -webkit-animation: imgSideMover 2s infinite alternate;
+  animation: imgSideMover 2s infinite alternate;
+}
+
+.TravelImg5 {
+  position: absolute;
+  bottom: 93%;
+  right: 30%;
+  width: 3%;
+  -webkit-animation: imgSideMover 2s infinite alternate;
+  animation: imgSideMover 2s infinite alternate;
+}
+
+.TravelImg6 {
+  position: absolute;
+  bottom: 85%;
+  right: 15%;
+  width: 25%;
+  -webkit-animation: imgPlaneMover 2s infinite alternate;
+  animation: imgPlaneMover 2s infinite alternate;
+}
+
+.TravelImg2 {
+  position: absolute;
+  bottom: 65%;
+  right: 10%;
+  width: 10%;
+  -webkit-animation: imgPlaneMover 2s infinite alternate;
+  animation: imgPlaneMover 2s infinite alternate;
+}
+.TravelImg8 {
+  position: absolute;
+  bottom: 90%;
+  right: 45%;
+  width: 6%;
+  -webkit-animation: imgSideMover 2s infinite alternate;
+  animation: imgSideMover 2s infinite alternate;
+}
+.TravelImg3 {
+  position: absolute;
+  bottom: 75%;
+  right: 70%;
+  width: 7%;
+  -webkit-animation: imgSideMover 2s infinite alternate;
+  animation: imgSideMover 2s infinite alternate;
+}
+.TravelImg7 {
+  position: absolute;
+  bottom: 75%;
+  right: 47%;
+  width: 15%;
+  -webkit-animation: imgSideMover 2s infinite alternate;
+  animation: imgSideMover 2s infinite alternate;
+}
+.TravelImg1 {
+  position: absolute;
+  bottom: 75%;
+  right: 30%;
+  width: 10%;
+  -webkit-animation: imgSideMover 2s infinite alternate;
+  animation: imgSideMover 2s infinite alternate;
+}
+
+.TravelImg9 {
+  position: absolute;
+  bottom: 30%;
+  right: 5%;
+  width: 15%;
+  -webkit-animation: imgSideMover 2s infinite alternate;
+  animation: imgSideMover 2s infinite alternate;
+}
+
+.TravelImg10 {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 15%;
+  -webkit-animation: imgSideMover 2s infinite alternate;
+  animation: imgSideMover 2s infinite alternate;
+}
+
+.TravelImg11 {
+  position: absolute;
+  bottom: 5%;
+  right: 70%;
+  width: 25%;
+  -webkit-animation: imgLeftSideMover 2s infinite alternate;
+  animation: imgLeftSideMover 2s infinite alternate;
+}
+
+/* =======Image Moving ANimations ======= */
+
+/* Up and down Movement */
+@-webkit-keyframes imageMovers {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes imageMovers {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Plane Sideways Movement */
+@-webkit-keyframes imgPlaneMover {
+  0% {
+    /* transform: translateX(0); */
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1.2);
+    /* transform: translateX(15%); */
+  }
+}
+@keyframes imgPlaneMover {
+  0% {
+    /* transform: translateX(0); */
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1.2);
+    /* transform: translateX(15%); */
+  }
+}
+
+/* Sideways Movement */
+@-webkit-keyframes imgSideMover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(15%);
+  }
+}
+@keyframes imgSideMover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(15%);
+  }
+}
+
+/* Sideways Left Movement */
+@-webkit-keyframes imgLeftSideMover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-15%);
+  }
+}
+@keyframes imgLeftSideMover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-15%);
+  }
+}
+
+/* ============BOOK SECTIONS ENDS======= */
+
+/* ============PACKAGES SECTIONS START======= */
+
+.packages p {
+  color: #000;
+  text-align: justify;
+}
+
+.packages .stars i {
+  color: var(--sec-color);
+}
+
+.packages .PBox {
+  padding: 1em;
+  margin-bottom: 2em;
+  justify-content: space-between;
+}
+
+.packages .PBox:hover {
+  border-bottom: solid 2px var(--main-color);
+  box-shadow: 1px 5px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.packages .PBox .sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+
+.packages .PBox .sliderContainer i {
+  position: absolute;
+  top: 50%;
+  background-color: var(--sec-color);
+  padding: 0.5em;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.packages .PBox .sliderContainer .bi-chevron-right {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  background-color: var(--sec-color);
+  padding: 0.5em;
+  color: #fff;
+  z-index: 1;
+}
+
+/* Slider settings for each slide */
+.packages .PBox .sliderContainer .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  place-items: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.packages .PBox .slide .sliderImg {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+  object-position: bottom;
+  z-index: -1;
+}
+
+.packages .PBox .sliderContainer .slideB {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  place-items: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.packages .PBox .slideB .sliderImg {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+  object-position: bottom;
+  z-index: -1;
+}
+.packages .PBox .sliderContainer .slideA {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  place-items: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.packages .PBox .slideA .sliderImg {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+  object-position: bottom;
+  z-index: -1;
+}
+.packages .PBox .sliderContainer .slideC {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  place-items: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.packages .PBox .slideC .sliderImg {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+  object-position: bottom;
+  z-index: -1;
+}
+.packages .PBox .sliderContainer .slideD {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  place-items: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.packages .PBox .slideD .sliderImg {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+  object-position: bottom;
+  z-index: -1;
+}
+.packages .PBox .sliderContainer .slideE {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  place-items: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.packages .PBox .slideE .sliderImg {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+  object-position: bottom;
+  z-index: -1;
+}
+
+.packages .PBox .PackageContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: normal;
+
+  min-height: 350px;
+}
+
+.packages .PBox .bi-geo-alt {
+  color: var(--main-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* ============PACKAGES SECTIONS ENDS======= */
+
+/* ============SERVICES SECTIONS START======= */
+
+.ServiceContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  padding: 1em;
+  margin: 1em;
+  box-shadow: 1px 5px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.SBox h3,
+.SBox p {
+  text-align: center;
+}
+
+.SBox p {
+  color: #000;
+}
+
+.SBox i {
+  color: var(--main-color);
+  font-size: 3rem;
+  align-items: center;
+  margin: 0.5em;
+}
+
+.SBox i:hover {
+  transform: scale(1.1);
+}
+
+/* ============SERVICES SECTIONS END======= */
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  header div .bi-list {
+    display: initial;
+  }
+
+  header .navBar {
+    position: absolute;
+    background-color: rgba(2, 2, 49, 0.95);
+    top: -1000%;
+    left: 0;
+    right: 0;
+    padding: 1em 2em;
+    border-top: 0.2em solid rgb(13, 1, 63);
+    width: 100%;
+    transition: all 0.3s ease-in;
+    text-align: center;
+  }
+
+  header .navBar.active {
+    top: 100%;
+    transition: all 0.3s ease-out;
+  }
+
+  header .navBar a {
+    display: block;
+    text-transform: uppercase;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: rgb(1, 1, 39);
+  }
+
+  .loginFormContainer form {
+    margin-top: 4em;
+
+    width: 80%;
+  }
+
+  .loginFormContainer i {
+    position: absolute;
+    bottom: 75%;
+    left: 89%;
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  .loginFormContainer form p,
+  label {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.7rem;
+  }
+
+  .hero .controls {
+    top: 7em;
+  }
+
+  .heading span {
+    font-size: 1rem;
+  }
+  .BookImgSide {
+    position: relative;
+    overflow: hidden;
+    padding: 1em;
+    border-left: none;
+    border-top: solid 2px var(--sec-color);
+  }
+
+  .ServiceContent {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ServiceContent {
+    width: 100%;
+  }
+}

@@ -1,0 +1,688 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/E-TRAVEL LOGO.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootsrap styles -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+
+    <!-- Global  Styles -->
+    <link rel="stylesheet" href="/assets/css/globalstyles.css" />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- Website title -->
+    <title>Errytage Travel and Tour Website</title>
+  </head>
+  <body>
+    <!-- Header starts -->
+
+    <header class="">
+      <div class="container d-flex flex-row justify-content-between">
+        <a href="home" class="col-3">
+          <img
+            src="assets/images/E-TRAVEL LOGO.png"
+            alt="errytage-travel-logo"
+            width="50"
+          />
+        </a>
+
+        <!-- Naviagtion links -->
+        <nav class="navBar col-6">
+          <a href="#home"> Home </a>
+          <a href="#book"> Book </a>
+          <a href="#packages"> Packages </a>
+          <a href="#gallery"> Gallery </a>
+          <a href="#reviews"> Reviews </a>
+          <a href="#contact"> Contact </a>
+        </nav>
+
+        <!-- Icons -->
+        <section class="d-flex col-3 justify-content-end">
+          <i class="bi bi-search icons p-2"></i>
+          <i class="bi bi-person-circle icons p-2" id="openForm"></i>
+        </section>
+        <div><i class="bi bi-list" id="menuBar"> </i></div>
+      </div>
+      <form action="mt-5" class="searchBarContainer" id="search-container">
+        <input
+          type="search"
+          id="searchB"
+          placeholder="search"
+          class="searchBar form-control w-100"
+        />
+        <label for="searchB"> <i class="bi bi-search p-2 icons"></i></label>
+      </form>
+    </header>
+    <!-- Header Ends -->
+
+    <!-- Logins Begins -->
+    <section class="loginFormContainer">
+      <i class="bi bi-x icons p-2" id="closeForm"></i>
+      <form action="">
+        <h3>Logins</h3>
+        <input
+          type="email"
+          class="box p-3 form-control"
+          placeholder="enter your email"
+        />
+        <input
+          type="password"
+          class="box p-3 form-control"
+          placeholder="enter your password"
+        />
+        <input
+          type="submit"
+          value="Login"
+          class="btn"
+          placeholder="enter your password"
+        />
+        <div class="mb-1">
+          <input type="checkbox" class="box" />
+          <label for="remember"> Remember me</label>
+        </div>
+        <p>Forgot password? <a href="#">click here</a></p>
+        <p>Dont have an account? <a href="#"> Register Now</a></p>
+      </form>
+    </section>
+
+    <!-- Logins Ends -->
+    <!-- Hero section starts -->
+    <section class="hero">
+      <div class="heroContents">
+        <h2>A Worthwhile Adventure</h2>
+        <p>Discover new places with us, adventure awaits you</p>
+        <button class="btn">Discover More</button>
+      </div>
+
+      <!-- Video button -->
+      <div class="controls">
+        <span
+          class="vidBtn active"
+          data-src="https://player.vimeo.com/external/559562893.sd.mp4?s=424c9685ac6a370e9655d050fbf7cbbded540502&profile_id=164&oauth2_token_id=57447761"
+        ></span>
+        <span
+          class="vidBtn"
+          data-src="https://player.vimeo.com/external/554374685.sd.mp4?s=4f293e348525d45ce637acc7566fee9c098aa5cd&profile_id=164&oauth2_token_id=57447761"
+        ></span>
+        <span
+          class="vidBtn"
+          data-src="https://player.vimeo.com/external/654839373.sd.mp4?s=89a233929e7676be710bf7837ba5c4688682f76d&profile_id=164&oauth_token_id=57447761"
+        ></span>
+        <span
+          class="vidBtn"
+          data-src="https://player.vimeo.com/external/611503445.sd.mp4?s=a04945510f5b013e340e2ca93d67516f81ac5247&profile_id=164&oauth2_token_id=57447761"
+        ></span>
+        <span
+          class="vidBtn"
+          data-src="https://player.vimeo.com/external/172488192.sd.mp4?s=79c8ee9cc52ef04f2f33662d29b1aa031791931b&profile_id=164"
+        ></span>
+      </div>
+
+      <!-- The Video itself -->
+      <div class="videoContainer">
+        <!-- <iframe
+          width="420"
+          height="315"
+          src="https://vod-progressive.akamaized.net/exp=1645106876~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1360%2F17%2F431802301%2F1877734519.mp4~hmac=2a70c279a4717dd633fe83672c53109a19bd85a24424e040f89fb22844c78c1a/vimeo-prod-skyfire-std-us/01/1360/17/431802301/1877734519.mp4?filename=Beach+-+42894.mp4&autoplay=1"
+          allow="autoplay"
+        >
+        </iframe> -->
+        <video
+          src="https://player.vimeo.com/external/559562893.sd.mp4?s=424c9685ac6a370e9655d050fbf7cbbded540502&profile_id=164&oauth2_token_id=57447761"
+          id="videoSlider"
+          autoplay
+          loop
+        ></video>
+        <div class="layIt"></div>
+      </div>
+    </section>
+    <!-- Hero section end -->
+    <!-- Book Now Section Starts -->
+    <section class="book" id="book">
+      <h2 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="dash"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w</span>
+      </h2>
+
+      <div class="container d-flex flex-column flex-lg-row">
+        <div class="BookImgSide col-12 col-lg-6">
+          <img class="TravelImg" src="/assets/images/travel-euclidean- 1.png" />
+          <img
+            class="TravelImg1"
+            src="/assets/images/travel-euclidean- 2.png"
+          />
+          <img
+            class="TravelImg2"
+            src="/assets/images/travel-euclidean- 3.png"
+          />
+          <img
+            class="TravelImg3"
+            src="/assets/images/travel-euclidean- 4.png"
+          />
+          <img
+            class="TravelImg4"
+            src="/assets/images/travel-euclidean- 5.png"
+          />
+          <img
+            class="TravelImg5"
+            src="/assets/images/travel-euclidean- 6.png"
+          />
+          <img
+            class="TravelImg6"
+            src="/assets/images/travel-euclidean- 7.png"
+          />
+          <img
+            class="TravelImg7"
+            src="/assets/images/travel-euclidean- 8.png"
+          />
+          <img
+            class="TravelImg8"
+            src="/assets/images/travel-euclidean- 9.png"
+          />
+          <img
+            class="TravelImg9"
+            src="/assets/images/travel-euclidean- 10.png"
+          />
+          <img
+            class="TravelImg10"
+            src="/assets/images/travel-euclidean- 11.png"
+          />
+          <img
+            class="TravelImg11"
+            src="/assets/images/travel-euclidean- 12.png"
+          />
+        </div>
+        <div class="BookFormSide col-12 col-lg-6">
+          <div class="d-flex flex-column">
+            <label for="Place"> Where To </label>
+            <input
+              type="text"
+              placeholder="Destination Name"
+              class="form-control"
+            />
+          </div>
+          <div class="d-flex flex-column">
+            <label for="Number of Guest"> How Many </label>
+            <input
+              type="text"
+              placeholder="Number of Guest"
+              class="form-control"
+            />
+          </div>
+          <div class="d-flex flex-column">
+            <label for="Place"> Arrivals </label>
+            <input type="date" placeholder="Arrivals" class="form-control" />
+          </div>
+          <div class="d-flex flex-column">
+            <label for="Place"> Leaving </label>
+            <input
+              type="date"
+              placeholder="Destination Name"
+              class="form-control"
+            />
+          </div>
+
+          <input type="submit" value="Book Now" class="btn" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Book Now Section Ends -->
+
+    <!-- Packages Section Ends -->
+    <section class="container packages" id="packages">
+      <h2 class="heading">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+      </h2>
+      <article class="d-flex flex-wrap justify-content-between col-12">
+        <!-- Package One -->
+        <div class="PBox d-flex flex-column col-12 col-lg-4">
+          <div class="sliderContainer">
+            <i class="bi bi-chevron-left"></i>
+            <i class="bi bi-chevron-right"></i>
+            <div class="slide">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/4851434/pexels-photo-4851434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slide">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/706352/pexels-photo-706352.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slide">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/4602267/pexels-photo-4602267.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slide">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/3587030/pexels-photo-3587030.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              />
+            </div>
+          </div>
+          <div class="PackageContent">
+            <div class="d-flex">
+              <i class="bi bi-geo-alt"></i>
+              <h2>Mubai</h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem
+              magna, lobortis pretium lectus placerat, euismod ultrices sem.
+            </p>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <h3>₦350,000</h3>
+            </div>
+            <button class="btn">Book Now</button>
+          </div>
+        </div>
+
+        <!-- Package Two -->
+        <div class="PBox d-flex flex-column col-12 col-lg-4">
+          <div class="sliderContainer">
+            <i class="bi bi-chevron-left ab"></i>
+            <i class="bi bi-chevron-right ba"></i>
+            <div class="slideA">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/2044434/pexels-photo-2044434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slideA">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/2867769/pexels-photo-2867769.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slideA">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/3361469/pexels-photo-3361469.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slideA">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/10514386/pexels-photo-10514386.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+          <div class="PackageContent">
+            <div class="d-flex">
+              <i class="bi bi-geo-alt"></i>
+              <h2>Dubai</h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem
+              magna, lobortis pretium lectus placerat, euismod ultrices sem. In
+              congue sollicitudin mauris eu maximus. Aenean cursus, elit eu
+              volutpat commodo, massa justo elementum ex, non luctus elit nulla
+              eu lectus.
+            </p>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <h3>₦550,000</h3>
+            </div>
+            <button class="btn">Book Now</button>
+          </div>
+        </div>
+
+        <!-- Package Three -->
+        <div class="PBox d-flex flex-column col-12 col-lg-4">
+          <div class="sliderContainer">
+            <i class="bi bi-chevron-left"></i>
+            <i class="bi bi-chevron-right"></i>
+            <div class="slideB">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/1906879/pexels-photo-1906879.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slideB">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/1427578/pexels-photo-1427578.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slideB">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/672531/pexels-photo-672531.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slideB">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/3622681/pexels-photo-3622681.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+          <div class="PackageContent">
+            <div class="d-flex">
+              <i class="bi bi-geo-alt"></i>
+              <h2>London</h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem
+              magna, lobortis pretium lectus placerat, euismod ultrices sem. In
+              congue sollicitudin mauris eu maximus. Aenean cursus, elit eu
+              volutpat commodo, massa justo elementum ex, non luctus elit nulla
+              eu lectus.
+            </p>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <h3>₦750,000</h3>
+            </div>
+            <button class="btn">Book Now</button>
+          </div>
+        </div>
+
+        <!-- Package Four -->
+        <div class="PBox d-flex flex-column col-12 col-lg-4">
+          <div class="sliderContainer">
+            <i class="bi bi-chevron-left"></i>
+            <i class="bi bi-chevron-right"></i>
+            <div class="slideC">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slideC">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/1450363/pexels-photo-1450363.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slideC">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/2525899/pexels-photo-2525899.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slideC">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/3155667/pexels-photo-3155667.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+          <div class="PackageContent">
+            <div class="d-flex">
+              <i class="bi bi-geo-alt"></i>
+              <h2>Maldives</h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem
+              magna, lobortis pretium lectus placerat, euismod ultrices sem. In
+              congue sollicitudin mauris eu maximus. Aenean cursus, elit eu
+              volutpat commodo, massa justo elementum ex, non luctus elit nulla
+              eu lectus.
+            </p>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <h3>₦950,000</h3>
+            </div>
+            <button class="btn">Book Now</button>
+          </div>
+        </div>
+
+        <!-- Package Five -->
+        <div class="PBox d-flex flex-column col-12 col-lg-4">
+          <div class="sliderContainer">
+            <i class="bi bi-chevron-left"></i>
+            <i class="bi bi-chevron-right"></i>
+            <div class="slideD">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/378570/pexels-photo-378570.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slideD">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/450597/pexels-photo-450597.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slideD">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/1796503/pexels-photo-1796503.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="slideD">
+              <img
+                class="sliderImg"
+                src="https://images.pexels.com/photos/8247/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+          <div class="PackageContent">
+            <div class="d-flex">
+              <i class="bi bi-geo-alt"></i>
+              <h2>New York</h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem
+              magna, lobortis pretium lectus placerat, euismod ultrices sem. In
+              congue sollicitudin mauris eu maximus. Aenean cursus, elit eu
+              volutpat commodo, massa justo elementum ex, non luctus elit nulla
+              eu lectus.
+            </p>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <h3>₦950,000</h3>
+            </div>
+            <button class="btn">Book Now</button>
+          </div>
+        </div>
+
+        <!-- Package Six -->
+        <div class="PBox d-flex flex-column col-12 col-lg-4">
+          <div class="sliderContainer">
+            <i class="bi bi-chevron-left"></i>
+            <i class="bi bi-chevron-right"></i>
+            <div class="slideE">
+              <img
+                class="sliderImg"
+                src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Centre_de_Formation_Bioforce_Afrique_%28Dakar%2C_S%C3%A9n%C3%A9gal%29.jpg"
+              />
+            </div>
+            <div class="slideE">
+              <img
+                class="sliderImg"
+                src="https://www.luciassociation.org/wp-content/uploads/2018/03/Dakar_night_view-900x600.jpg"
+              />
+            </div>
+            <div class="slideE">
+              <img
+                class="sliderImg"
+                src="https://media.istockphoto.com/photos/aerial-view-of-dakar-picture-id482018618?k=20&m=482018618&s=612x612&w=0&h=0xwz--Sb4Qc8lR_Q3F7FKPcghADMBqVPaLFMI4X61yk="
+              />
+            </div>
+            <div class="slideE">
+              <img
+                class="sliderImg"
+                src="https://radissonhotels.iceportal.com/image/radisson-hotel-dakar-diamniadio/exteriorview/16256-113972-f63752273_3xl.jpg"
+              />
+            </div>
+          </div>
+          <div class="PackageContent">
+            <div class="d-flex">
+              <i class="bi bi-geo-alt"></i>
+              <h2>Dakar</h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem
+              magna, lobortis pretium lectus placerat, euismod ultrices sem. In
+              congue sollicitudin mauris eu maximus. Aenean cursus, elit eu
+              volutpat commodo, massa justo elementum ex, non luctus elit nulla
+              eu lectus.
+            </p>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <h3>₦950,000</h3>
+            </div>
+            <button class="btn">Book Now</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- Packages Section Ends -->
+
+    <!-- Services Section Ends -->
+    <section class="container services" id="services">
+      <h2 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+      </h2>
+      <article class="">
+        
+        <div class="SBox d-flex flex-wrap justify-content-between ">
+          <div class="ServiceContent ">
+            
+            <i class="bi bi-building"></i>
+              <h3>Affordable Hotels</h3>
+            
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem
+              magna, lobortis pretium lectus placerat, euismod ultrices sem.
+            </p>
+           
+       
+        </div>
+          <div class="ServiceContent ">     
+            <i class="fas fa-utensils"></i>
+              <h3>Food and Drinks</h3>
+            
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem
+              magna, lobortis pretium lectus placerat, euismod ultrices sem.
+            </p>
+           
+       
+        </div>
+          <div class="ServiceContent ">
+            <i class="fas fa-hard-hat"></i>
+              <h3>Safety Guide</h3>
+            
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem
+              magna, lobortis pretium lectus placerat, euismod ultrices sem.
+            </p>
+           
+       
+        </div>
+          <div class="ServiceContent ">
+            <i class="fas fa-globe-africa"></i>
+              <h3>Arounde The world</h3>
+            
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem
+              magna, lobortis pretium lectus placerat, euismod ultrices sem.
+            </p>
+           
+       
+        </div>
+          <div class="ServiceContent ">
+            <i class="fas fa-plane-departure"></i>
+              <h3>Fastest Travels</h3>
+            
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem
+              magna, lobortis pretium lectus placerat, euismod ultrices sem.
+            </p>
+           
+       
+        </div>
+          <div class="ServiceContent ">
+            <i class="fas fa-hiking"></i>
+              <h3>Adventures</h3>
+            
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem
+              magna, lobortis pretium lectus placerat, euismod ultrices sem.
+            </p>
+           
+       
+        </div>
+      </article>
+    </section>
+    <!-- Serviceskages Section Ends -->
+  </body>
+
+  <!-- Script -->
+  <script src="/assets/js/main.js"></script>
+</html>
