@@ -720,11 +720,15 @@ p {
 /* ============GALLERY SECTIONS START======= */
 .gallery {
   overflow: hidden;
+  position: relative;
 }
 
 .gallery .fullImage {
-  position: relative;
+  position: fixed;
   left: 100%;
+  top: 0;
+  bottom: 0;
+
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
@@ -732,6 +736,7 @@ p {
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease-in-out;
+  z-index: 1;
 }
 .gallery .fullImage.active {
   left: 0;
@@ -743,16 +748,47 @@ p {
   font-weight: 600;
   color: #fff;
   position: absolute;
-  top: 5%;
+  top: 20%;
   right: 5%;
+  cursor: pointer;
+}
+
+.gallery .fullImage i {
+  position: absolute;
+  top: 50%;
+  background-color: var(--sec-color);
+  padding: 0.5em;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.gallery .fullImage .bi-chevron-right {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  background-color: var(--sec-color);
+  padding: 0.5em;
+  color: #fff;
+  z-index: 1;
+}
+.gallery .fullImage .bi-chevron-left {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  background-color: var(--sec-color);
+  padding: 0.5em;
+  color: #fff;
+  z-index: 1;
 }
 
 .gallery .fullImage img {
+  margin-top: 5em;
   width: 90%;
-  max-width: 500px;
-  height: 400px;
+  max-width: 800px;
+  height: 500px;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center center;
 }
 
 .gallery .galleryThumb {
@@ -766,13 +802,13 @@ p {
   height: 300px;
   object-fit: cover;
   cursor: pointer;
-  color: var(--main-color);
+  background-color: var(--main-color);
 }
 
 .gallery .galleryThumb img:hover {
   transform: scale(1.1);
 
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 /* ============GALLERY SECTIONS END======= */
@@ -856,5 +892,9 @@ p {
 @media screen and (max-width: 500px) {
   .ServiceContent {
     width: 100%;
+  }
+  .gallery .fullImage img {
+    margin-top: 7em;
+    height: 400px;
   }
 }

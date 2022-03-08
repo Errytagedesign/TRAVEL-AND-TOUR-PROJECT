@@ -202,3 +202,20 @@ SliderBtnPrev.forEach((btn) => {
     carousele();
   });
 });
+
+const ImgThumb = document.querySelectorAll(".thumbImg");
+const ImgPopUpBox = document.querySelector(".fullImage");
+const ImgPopUp = document.querySelector(".PopImg");
+const CloseImgPopUp = document.querySelector(".CloseGallery");
+
+CloseImgPopUp.addEventListener("click", () => {
+  ImgPopUpBox.classList.remove("active");
+});
+
+ImgThumb.forEach((thumb) => {
+  thumb.addEventListener("click", () => {
+    ImgPopUpBox.classList.add("active");
+    let myImg = thumb.src;
+    ImgPopUp.src = myImg;
+  });
+});
