@@ -717,6 +717,66 @@ p {
 
 /* ============SERVICES SECTIONS END======= */
 
+/* ============GALLERY SECTIONS START======= */
+.gallery {
+  overflow: hidden;
+}
+
+.gallery .fullImage {
+  position: relative;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.gallery .fullImage.active {
+  left: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.gallery .fullImage span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.gallery .fullImage img {
+  width: 90%;
+  max-width: 500px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.gallery .galleryThumb {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.gallery .galleryThumb img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+.gallery .galleryThumb img:hover {
+  transform: scale(1.1);
+
+  opacity: 0.8;
+}
+
+/* ============GALLERY SECTIONS END======= */
+
 /* Media Queries */
 
 @media screen and (max-width: 768px) {
