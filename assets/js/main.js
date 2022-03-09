@@ -22,6 +22,26 @@ VidControls.forEach((btn) => {
   });
 });
 
+// Autoplay Video Slider after every 15 seconds
+let VidCurrentTarget = 0;
+const changeVidSlider = (videos) => {
+  let VidChange = VidControls[videos];
+
+  VidControls.forEach((btn) => {
+    VidSlider.src = VidChange.getAttribute("data-src");
+    document.querySelector(".controls .active").classList.remove("active");
+    btn.classList.add("active");
+  });
+};
+
+setInterval(() => {
+  VidCurrentTarget++;
+  if (VidCurrentTarget === VidControls.length) {
+    VidCurrentTarget = 0;
+  }
+  changeVidSlider(VidCurrentTarget);
+}, 8000);
+
 // On window scroll the search bar shouldnt appear
 window.onscroll = () => {
   searchBtn.classList.remove("bi-x");
@@ -177,45 +197,100 @@ setInterval(() => {
 //   carousel();
 // });
 
-SliderBtnNext.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    counter++;
+// Add event listener for all the naviagtion btns
+// SliderBtnNext.forEach((btn) => {
+//   btn.addEventListener("click", () => {
+//     counter++;
 
-    carousel();
-    carousela();
-    carouselb();
-    carouselc();
-    carouseld();
-    carousele();
-  });
-});
+//     carousel();
+//     carousela();
+//     carouselb();
+//     carouselc();
+//     carouseld();
+//     carousele();
+//   });
+// });
 
-SliderBtnPrev.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    counter--;
+// SliderBtnPrev.forEach((btn) => {
+//   btn.addEventListener("click", () => {
+//     counter--;
 
-    carousel();
-    carousela();
-    carouselb();
-    carouselc();
-    carouseld();
-    carousele();
-  });
-});
+//     carousel();
+//     carousela();
+//     carouselb();
+//     carouselc();
+//     carouseld();
+//     carousele();
+//   });
+// });
 
+// Gallery functions
 const ImgThumb = document.querySelectorAll(".thumbImg");
 const ImgPopUpBox = document.querySelector(".fullImage");
 const ImgPopUp = document.querySelector(".PopImg");
 const CloseImgPopUp = document.querySelector(".CloseGallery");
 
+const NextBtn = document.querySelector(".fa-angle-right");
+const PrevBtn = document.querySelector(".fa-angle-left");
+
+// remove active class att when the gallery is closed
 CloseImgPopUp.addEventListener("click", () => {
   ImgPopUpBox.classList.remove("active");
 });
 
+// Add active class att when the gallery is opened and update the gallery image src witht the thubnails
 ImgThumb.forEach((thumb) => {
   thumb.addEventListener("click", () => {
     ImgPopUpBox.classList.add("active");
     let myImg = thumb.src;
     ImgPopUp.src = myImg;
   });
+});
+
+let currentTarget = 0;
+const UpdateImgSrc = (images) => {
+  let SliderImgs = ImgThumb[images];
+  ImgThumb.forEach(() => {
+    ImgPopUp.src = SliderImgs.src;
+  });
+
+  // ImgPopUp.src = ImgThumb.src;
+};
+
+NextBtn.addEventListener("click", () => {
+  currentTarget--;
+  if (currentTarget === ImgThumb.length) {
+    currentTarget = 0;
+  }
+  UpdateImgSrc(currentTarget);
+});
+
+PrevBtn.addEventListener("click", () => {
+  currentTarget++;
+  if (currentTarget < 0) {
+    currentTarget = ImgThumb.length - 1;
+  }
+
+  UpdateImgSrc(currentTarget);
+});
+
+// Swiper plugin
+var swiper = new Swiper(".review-swiper", {
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    450: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
 });

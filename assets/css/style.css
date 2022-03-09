@@ -497,6 +497,12 @@ p {
   justify-content: space-between;
 }
 
+.packages .PackBoxContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
 .packages .PBox:hover {
   border-bottom: solid 2px var(--main-color);
   box-shadow: 1px 5px 4px 1px rgba(0, 0, 0, 0.1);
@@ -684,15 +690,24 @@ p {
 
 /* ============SERVICES SECTIONS START======= */
 
+.SBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
 .ServiceContent {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 30%;
   padding: 1em;
   margin: 1em;
   box-shadow: 1px 5px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.ServiceContent:hover {
+  background-color: var(--sec-color);
 }
 
 .SBox h3,
@@ -704,7 +719,7 @@ p {
   color: #000;
 }
 
-.SBox i {
+.SBox .ServiceContent i {
   color: var(--main-color);
   font-size: 3rem;
   align-items: center;
@@ -763,7 +778,7 @@ p {
   z-index: 1;
 }
 
-.gallery .fullImage .bi-chevron-right {
+.gallery .fullImage .fa-angle-right {
   position: absolute;
   top: 50%;
   right: 10%;
@@ -772,7 +787,7 @@ p {
   color: #fff;
   z-index: 1;
 }
-.gallery .fullImage .bi-chevron-left {
+.gallery .fullImage .fa-angle-left {
   position: absolute;
   top: 50%;
   left: 10%;
@@ -812,6 +827,53 @@ p {
 }
 
 /* ============GALLERY SECTIONS END======= */
+
+/* ============REVIEWS SECTIONS START======= */
+
+/* .RBox {
+  display: flex;
+} */
+
+.ReviewsContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  height: 350px !important;
+  border-radius: 15px;
+  box-shadow: 1px 5px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.ReviewsContent:hover {
+  background-color: var(--sec-color);
+}
+
+.RBox h3,
+.RBox p {
+  text-align: center;
+}
+.RBox h3 {
+  font-size: 1.5rem;
+}
+
+.RBox p {
+  color: #000;
+}
+
+.reviews .stars i {
+  color: var(--sec-color);
+}
+.RBox i:hover {
+  transform: scale(1.1);
+}
+
+.RBox .ReviewsContent img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+/* ============REVIEWS SECTIONS END======= */
 
 /* Media Queries */
 
