@@ -181,7 +181,7 @@ setInterval(() => {
   carouselc();
   carouseld();
   carousele();
-}, 5000);
+}, 15000);
 
 // SliderBtnNext.addEventListener("click", () => {
 //   counter++;
@@ -276,6 +276,26 @@ PrevBtn.addEventListener("click", () => {
 
 // Swiper plugin
 var swiper = new Swiper(".review-swiper", {
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    450: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+var swiper = new Swiper(".brand-swiper", {
   spaceBetween: 20,
   loop: true,
   autoplay: {

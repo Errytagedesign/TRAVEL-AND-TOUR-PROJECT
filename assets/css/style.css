@@ -13,7 +13,7 @@
 
 .btn:hover {
   background-color: var(--sec-color);
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 header {
   position: fixed;
@@ -689,7 +689,9 @@ p {
 /* ============PACKAGES SECTIONS ENDS======= */
 
 /* ============SERVICES SECTIONS START======= */
+/* .ServiceBoxContainer{
 
+} */
 .SBox {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -877,6 +879,12 @@ p {
 .review-swiper {
   height: 400px;
 }
+
+.brand-swiper {
+  height: 200px;
+  padding: 2em;
+  background-color: var(--sec-color);
+}
 /* ============REVIEWS SECTIONS END======= */
 
 /* ============CONTACT SECTIONS END======= */
@@ -909,6 +917,12 @@ p {
 
 .CBox aside {
   background-color: var(--main-color);
+  border-radius: 5px;
+  padding: 1.5em;
+}
+
+.CBox h4 {
+  color: #fff;
 }
 
 /* ============CONTACT SECTIONS END======= */
@@ -984,15 +998,15 @@ p {
     border-top: solid 2px var(--sec-color);
   }
 
-  .ServiceContent {
+  /* .ServiceContent {
     width: 45%;
-  }
+  } */
 }
 
 @media screen and (max-width: 500px) {
-  .ServiceContent {
+  /* .ServiceContent {
     width: 100%;
-  }
+  } */
   .gallery .fullImage img {
     margin-top: 7em;
     height: 400px;
