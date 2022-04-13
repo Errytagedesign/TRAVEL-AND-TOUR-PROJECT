@@ -1,3 +1,13 @@
+// declar all vairables for dark and bright theme
+const dark = document.querySelector(".darkTheme");
+
+dark.addEventListener("click", () => {
+  dark.classList.toggle("bi-moon-fill");
+  let element = document.body;
+
+  element.classList.toggle("darkMode");
+});
+
 // declar all vairables for open and close
 const searchBtn = document.querySelector(".bi-search");
 const searchBar = document.querySelector("#search-container");
@@ -304,13 +314,13 @@ var swiper = new Swiper(".brand-swiper", {
   },
   breakpoints: {
     450: {
-      slidesPerView: 1,
+      slidesPerView: 2,
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 4,
     },
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 6,
     },
   },
 });

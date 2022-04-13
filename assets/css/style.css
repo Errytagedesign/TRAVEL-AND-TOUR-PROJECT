@@ -1,5 +1,7 @@
 /* ============HEADER STYLES START======= */
 
+
+
 .btn {
   margin-bottom: 0.5em;
   width: 100%;
@@ -482,6 +484,7 @@ p {
 
 /* ============PACKAGES SECTIONS START======= */
 
+
 .packages p {
   color: #000;
   text-align: justify;
@@ -495,6 +498,7 @@ p {
   padding: 1em;
   margin-bottom: 2em;
   justify-content: space-between;
+  background-color: #fff;
 }
 
 .packages .PackBoxContainer {
@@ -696,7 +700,10 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
+ 
 }
+
+
 
 .ServiceContent {
   display: flex;
@@ -706,10 +713,13 @@ p {
   padding: 1em;
   margin: 1em;
   box-shadow: 1px 5px 4px 1px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .ServiceContent:hover {
   background-color: var(--sec-color);
+  transform: scale(1.1);
 }
 
 .SBox h3,
@@ -845,10 +855,11 @@ p {
   height: 350px !important;
   border-radius: 15px;
   box-shadow: 1px 5px 4px 1px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .ReviewsContent:hover {
-  background-color: var(--sec-color);
+  background-color: var(--main-color);
 }
 
 .RBox h3,
@@ -880,11 +891,7 @@ p {
   height: 400px;
 }
 
-.brand-swiper {
-  height: 200px;
-  padding: 2em;
-  background-color: var(--sec-color);
-}
+
 /* ============REVIEWS SECTIONS END======= */
 
 /* ============CONTACT SECTIONS END======= */
@@ -925,7 +932,68 @@ p {
   color: #fff;
 }
 
+.brand-swiper {
+  height: 100px;
+  padding: 2em;
+  background-color: var(--sec-color);
+}
+.BBox .swiper-slide{
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 /* ============CONTACT SECTIONS END======= */
+
+/* ============FOOTER SECTIONS START======= */
+
+footer {
+  background-color: rgb(17, 3, 78);
+  margin-top: 1em;
+  padding: 2em;
+}
+
+footer nav {
+  /* background-color: red; */
+  width: 100%;
+  margin-bottom: 2em;
+}
+footer nav a{
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  margin-top: 1em;
+  padding: 1em;
+  text-transform: uppercase;
+  
+}
+footer nav a:hover{
+
+  color: var(--sec-color);
+  
+}
+
+
+footer i {
+  font-size: 1.5rem;
+  padding: .5em;
+  color: var(--sec-color);
+  margin-top: 1em;
+  border: solid #fff 1.5px;
+  border-radius: 50%;
+  align-self: center;
+
+}
+footer i:hover {
+  
+  color: var(--main-color);
+  background-color: #fff;
+
+}
+
+/* ============FOOTER SECTIONS END======= */
+
 
 /* Media Queries */
 
