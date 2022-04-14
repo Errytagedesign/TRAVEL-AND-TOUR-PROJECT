@@ -268,7 +268,7 @@ const UpdateImgSrc = (images) => {
 };
 
 NextBtn.addEventListener("click", () => {
-  currentTarget--;
+  currentTarget++;
   if (currentTarget === ImgThumb.length) {
     currentTarget = 0;
   }
@@ -276,7 +276,7 @@ NextBtn.addEventListener("click", () => {
 });
 
 PrevBtn.addEventListener("click", () => {
-  currentTarget++;
+  currentTarget--;
   if (currentTarget < 0) {
     currentTarget = ImgThumb.length - 1;
   }
